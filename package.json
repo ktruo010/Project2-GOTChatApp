@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/ktruo010/Project2-GOTChatApp#readme",
   "dependencies": {
+    "concurrently": "^4.1.0",
     "express": "^4.17.1",
     "mysql2": "^1.6.5",
     "sequelize": "^5.8.7"
