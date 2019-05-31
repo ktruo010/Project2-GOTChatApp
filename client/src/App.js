@@ -7,6 +7,7 @@ const App = _ =>
   <Router>
     <div>
       <Route exact path='/' component={_ => <Login />} />
+      <Route exact path='/Home' component={_ => <Home />} />
     </div>
   </Router>
 
