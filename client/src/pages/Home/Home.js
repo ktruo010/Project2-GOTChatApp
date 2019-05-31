@@ -42,7 +42,7 @@ class Home extends Component {
         let messageArr = this.state.messageArr
         Messages.postOne(message)
         messageArr.push(message)
-        this.setState({ messageArr })
+        this.setState({ messageArr, WriteMessage: '' })
     }
 
     render() {
@@ -50,7 +50,7 @@ class Home extends Component {
             <>
                 <h1>Chat App</h1>
                 <GatherMessages messageArr={this.state.messageArr} />
-                <WriteMessage handleInputChange={this.handleInputChange} handleFormSubmit={this.handleFormSubmit} username={this.state.username} message={this.state.message} />
+                <WriteMessage handleInputChange={this.handleInputChange} handleFormSubmit={this.handleFormSubmit} username={this.state.username} message={this.state.WriteMessage} />
             </>
         )
     }
