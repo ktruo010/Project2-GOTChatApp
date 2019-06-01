@@ -9,7 +9,7 @@
    
     font-size: 25px;
     border: 15px solid white;
-    overflow: auto;
+    overflow: hidden scroll;
 }
 
 .user {

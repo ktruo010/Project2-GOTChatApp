@@ -7,7 +7,8 @@ import { withRouter } from 'react-router-dom';
 
 class Login extends Component {
   state={
-    user:''
+    user:'',
+    isAuth:'false'
   };
   handleChange=(event)=>{
     this.setState({[event.target.name]:event.target.value})
@@ -16,10 +17,13 @@ class Login extends Component {
     const user=this.state.user;
     if(user===''){
       localStorage.setItem('user','No one');
+      
     }
     else{
     localStorage.setItem('user',user);
+    
     }
+    localStorage.setItem('Authenticate','true');
     this.props.history.push('/home');
     
   }
