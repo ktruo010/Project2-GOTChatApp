@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import WriteMessage from '../../components/WriteMessage'
 import GatherMessages from '../../components/GatherMessages'
 import Messages from '..//../utils/Message.js'
+import MainTodo from '../../components/ToDoList/MainTodo';
 
 class Home extends Component {
     state = {
@@ -51,6 +52,7 @@ class Home extends Component {
                 <h1>Chat App</h1>
                 <GatherMessages messageArr={this.state.messageArr} />
                 <WriteMessage handleInputChange={this.handleInputChange} handleFormSubmit={this.handleFormSubmit} username={this.state.username} message={this.state.message} />
+                <MainTodo/>
             </>
         )
     }
