@@ -41,6 +41,9 @@ class Home extends Component {
 
     handleFormSubmit = event => {
         event.preventDefault()
+        if(this.state.WriteMessage===''){
+            this.state.WriteMessage='Valar Dohaeris'
+        }
         let message = {
             message: this.state.WriteMessage,
             username: this.state.username
