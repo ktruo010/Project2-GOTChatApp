@@ -2,11 +2,16 @@ import React, { Component } from 'react'
 import WriteMessage from '../../components/WriteMessage'
 import GatherMessages from '../../components/GatherMessages'
 import Messages from '..//../utils/Message.js'
-import MainTodo from '../../components/ToDoList/MainTodo';
+import ChatBanner from '../../components/Banner/Banner'
+import Logout from '../../components/Logout/Logout'
+
+///css imports
+import { Grid } from 'semantic-ui-react'
+import 'semantic-ui-css/semantic.min.css'
 
 class Home extends Component {
     state = {
-        username: 'Kevin',
+        username: localStorage.getItem('user'),
         WriteMessage: '',
         messageArr: []
     }
@@ -36,6 +41,9 @@ class Home extends Component {
 
     handleFormSubmit = event => {
         event.preventDefault()
+        if(this.state.WriteMessage===''){
+            this.state.WriteMessage='Valar Dohaeris'
+        }
         let message = {
             message: this.state.WriteMessage,
             username: this.state.username
@@ -43,17 +51,22 @@ class Home extends Component {
         let messageArr = this.state.messageArr
         Messages.postOne(message)
         messageArr.push(message)
-        this.setState({ messageArr })
+        this.setState({ messageArr, WriteMessage: '' })
     }
 
     render() {
         return (
-            <>
-                <h1>Chat App</h1>
+            <div>
+                <ChatBanner/>
+         
+               
                 <GatherMessages messageArr={this.state.messageArr} />
-                <WriteMessage handleInputChange={this.handleInputChange} handleFormSubmit={this.handleFormSubmit} username={this.state.username} message={this.state.message} />
-                <MainTodo/>
-            </>
+            
+
+                <WriteMessage placeholder="Valar Mogulis" handleInputChange={this.handleInputChange} handleFormSubmit={this.handleFormSubmit} username={this.state.username} message={this.state.WriteMessage} />
+
+                <Logout/>
+            </div>
         )
     }
 }
