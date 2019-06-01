@@ -1,0 +1,32 @@
+.container {
+    height:78vh;
+    width:100%;
+    display: flex;
+    
+    background: black ;
+  
+    color:white;
+   
+    font-size: 25px;
+    border: 15px solid white;
+    overflow: hidden scroll;
+}
+
+.user {
+    color:white !important ;
+    font-size: 11px;
+    margin-bottom: 10px ;
+    margin-left: 5px;
+    margin-top: 3px;
+}
+
+
+.messages {
+    margin-left: 10px;
+    background: rgb(180, 155, 123) ;
+    color: white;
+    display: inline;
+    padding: 4px 8px;
+    border-radius: 8px;
+    
+}
