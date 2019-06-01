@@ -2,6 +2,12 @@ import React, { Component } from 'react'
 import WriteMessage from '../../components/WriteMessage'
 import GatherMessages from '../../components/GatherMessages'
 import Messages from '..//../utils/Message.js'
+import ChatBanner from '../../components/Banner/Banner'
+import Logout from '../../components/Logout/Logout'
+
+///css imports
+import { Grid } from 'semantic-ui-react'
+import 'semantic-ui-css/semantic.min.css'
 
 class Home extends Component {
     state = {
@@ -47,11 +53,17 @@ class Home extends Component {
 
     render() {
         return (
-            <>
-                <h1>Chat App</h1>
+            <div>
+                <ChatBanner/>
+         
+               
                 <GatherMessages messageArr={this.state.messageArr} />
+            
+
                 <WriteMessage handleInputChange={this.handleInputChange} handleFormSubmit={this.handleFormSubmit} username={this.state.username} message={this.state.message} />
-            </>
+
+                <Logout/>
+            </div>
         )
     }
 }
