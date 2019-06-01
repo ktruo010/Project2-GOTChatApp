@@ -14,7 +14,6 @@ export default class Todoitem extends Component {
             <span className="mx-2 text-danger">
             <i className="fas fa-trash"/>
             </span>
-
             </div>
             </li>
         );
