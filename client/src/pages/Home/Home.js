@@ -11,7 +11,7 @@ import 'semantic-ui-css/semantic.min.css'
 
 class Home extends Component {
     state = {
-        username: 'Kevin',
+        username: localStorage.getItem('user'),
         WriteMessage: '',
         messageArr: []
     }
@@ -41,6 +41,9 @@ class Home extends Component {
 
     handleFormSubmit = event => {
         event.preventDefault()
+        if(this.state.WriteMessage===''){
+            this.state.WriteMessage='Valar Dohaeris'
+        }
         let message = {
             message: this.state.WriteMessage,
             username: this.state.username
@@ -48,7 +51,7 @@ class Home extends Component {
         let messageArr = this.state.messageArr
         Messages.postOne(message)
         messageArr.push(message)
-        this.setState({ messageArr })
+        this.setState({ messageArr, WriteMessage: '' })
     }
 
     render() {
@@ -60,7 +63,7 @@ class Home extends Component {
                 <GatherMessages messageArr={this.state.messageArr} />
             
 
-                <WriteMessage handleInputChange={this.handleInputChange} handleFormSubmit={this.handleFormSubmit} username={this.state.username} message={this.state.message} />
+                <WriteMessage placeholder="Valar Mogulis" handleInputChange={this.handleInputChange} handleFormSubmit={this.handleFormSubmit} username={this.state.username} message={this.state.WriteMessage} />
 
                 <Logout/>
             </div>
