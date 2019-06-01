@@ -2,10 +2,12 @@ import React from 'react'
 import { Comment } from 'semantic-ui-react'
 import 'semantic-ui-css/semantic.min.css'
 import './Messages.css'
+import ScrollToBottom from 'react-scroll-to-bottom';
 
 const GatherMessages = ({ messageArr }) => {      
   return (
     <div className="container">
+      <ScrollToBottom>
         <div style={{flexGrow:1}}>
           <Comment.Group>
             {messageArr.map(({ id, message, username }) => (
@@ -32,8 +34,8 @@ const GatherMessages = ({ messageArr }) => {
           
         </Comment.Group>
       </div>
+    </ScrollToBottom>
     </div>
-   
                 
    );
   }
