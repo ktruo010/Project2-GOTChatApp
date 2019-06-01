@@ -1,4 +1,4 @@
-require("dotenv").config()
+require('dotenv').config()
 const express = require('express')
 const { join } = require('path')
 const app = express()
@@ -10,5 +10,5 @@ app.use(express.json())
 require('./routes')(app)
 
 require('./config').sync()
-    .then(_ => app.listen(process.env.PORT || 3001))
-    .catch(e => console.log(e))
+  .then(_ => app.listen(process.env.PORT || 3001))
+  .catch(e => console.log(e))
