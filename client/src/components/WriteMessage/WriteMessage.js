@@ -11,7 +11,7 @@ const WriteMessage = ({ handleFormSubmit, handleInputChange, username, message }
     <Label.Detail as="h3" id="msg"> Message:
     </Label.Detail>
     </Label>
-    <Input style={{flexGrow:1}} type='text' id='WriteMessage' value={message} onChange={handleInputChange} />
+    <Input style={{flexGrow:1}} type='text' id='WriteMessage' placeholder="Valar Morghulis"value={message} onChange={handleInputChange} />
     <Button color='black'  onClick={handleFormSubmit}>Send</Button>
   </Form>
 

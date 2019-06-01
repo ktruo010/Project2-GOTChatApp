@@ -60,7 +60,7 @@ class Home extends Component {
                 <GatherMessages messageArr={this.state.messageArr} />
             
 
-                <WriteMessage handleInputChange={this.handleInputChange} handleFormSubmit={this.handleFormSubmit} username={this.state.username} message={this.state.message} />
+                <WriteMessage placeholder="Valar Mogulis" handleInputChange={this.handleInputChange} handleFormSubmit={this.handleFormSubmit} username={this.state.username} message={this.state.WriteMessage} />
 
                 <Logout/>
             </div>
