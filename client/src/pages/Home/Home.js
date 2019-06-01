@@ -11,7 +11,7 @@ import 'semantic-ui-css/semantic.min.css'
 
 class Home extends Component {
     state = {
-        username: 'Kevin',
+        username: localStorage.getItem('user'),
         WriteMessage: '',
         messageArr: []
     }
@@ -58,17 +58,12 @@ class Home extends Component {
          
                
                 <GatherMessages messageArr={this.state.messageArr} />
-<<<<<<< HEAD
-                <WriteMessage handleInputChange={this.handleInputChange} handleFormSubmit={this.handleFormSubmit} username={this.state.username} message={this.state.WriteMessage} />
-            </>
-=======
             
 
                 <WriteMessage handleInputChange={this.handleInputChange} handleFormSubmit={this.handleFormSubmit} username={this.state.username} message={this.state.message} />
 
                 <Logout/>
             </div>
->>>>>>> e2a518a24c67b1e6d3b679b6789dd74d46b42c28
         )
     }
 }
