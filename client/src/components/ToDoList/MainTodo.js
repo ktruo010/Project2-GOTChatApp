@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import Todo from './Todo'
 import Todolist from './Todolist';
-
-
+import './MainToDo.css'
+import { Segment , Grid , Divider , Icon} from 'semantic-ui-react'
 import uuid from "uuid";
 class MainTodo extends Component {
   state={
@@ -53,15 +53,34 @@ console.log(newName);
 };
   render(){
    // const SidePanel = () => {
-    
+  
       return (
-        <div className="container">
-          <div className="row">
-            <div className=".col-sm-11">
-            <h3 className="text-capitalize text-center">
-              Add Chat Names</h3>
+
+  
+
+
+        <Segment id="segmentBody">
+          <Grid columns={2}  >
+            <Grid.Column floated='left' width={8}>
+            <h3 id="addFaceHeader"> Faces To Collect </h3>
             <Todo name={this.state.name} handleChange=
             {this.handleChange} handleSubmit = {this.handleSubmit}/>
+            </Grid.Column>
+            <Grid.Column floated='right' width={8}>
+            <Todolist names={this.state.names}/>
+            </Grid.Column>
+          </Grid>
+
+          <Divider vertical ><Icon circular inverted name='angle double right' />
+          </Divider>
+        </Segment>
+        
+      );
+    }
+    }
+    
+    
+
             <Todolist names={this.state.names} HandleDelete={this.handleDelete}/>
             <button type="button"
                 className="ClearName"
@@ -75,6 +94,7 @@ console.log(newName);
       );
     }
   }
+
 
     export default MainTodo;
 
