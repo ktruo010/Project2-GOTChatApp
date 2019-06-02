@@ -6,6 +6,7 @@ import { withRouter } from 'react-router-dom';
 class Logout extends Component {
     handleFormSubmit=()=>{
         localStorage.removeItem('user');
+        localStorage.setItem('Authenticate','false');
         this.props.history.push('/');
         
       }
