@@ -5,8 +5,9 @@ import Messages from '..//../utils/Message.js'
 import ChatBanner from '../../components/Banner/Banner'
 import Logout from '../../components/Logout/Logout'
 import MainToDo from '../../components/ToDoList/MainTodo'
+import ScrollToBottom from 'react-scroll-to-bottom';
 ///css imports
-import { Grid } from 'semantic-ui-react'
+
 import 'semantic-ui-css/semantic.min.css'
 
 class Home extends Component {
@@ -58,14 +59,16 @@ class Home extends Component {
         return (
             <div>
                 <ChatBanner/>
-         
-               
+                <MainToDo/>
+                <ScrollToBottom >
                 <GatherMessages messageArr={this.state.messageArr} />
-            
+                </ScrollToBottom>
+
+                
 
                 <WriteMessage placeholder="Valar Mogulis" handleInputChange={this.handleInputChange} handleFormSubmit={this.handleFormSubmit} username={this.state.username} message={this.state.WriteMessage} />
 
-                <MainToDo/>
+                
 
                 <Logout/>
             </div>
