@@ -38,18 +38,20 @@ console.log(newName);
   };
   render(){
    // const SidePanel = () => {
-    
+  
       return (
+
+  
 
 
         <Segment id="segmentBody">
-          <Grid columns={2} relaxed='very'>
-            <Grid.Column>
-            <h3> Faces To Collect </h3>
+          <Grid columns={2}  >
+            <Grid.Column floated='left' width={8}>
+            <h3 id="addFaceHeader"> Faces To Collect </h3>
             <Todo name={this.state.name} handleChange=
             {this.handleChange} handleSubmit = {this.handleSubmit}/>
             </Grid.Column>
-            <Grid.Column>
+            <Grid.Column floated='right' width={8}>
             <Todolist names={this.state.names}/>
             </Grid.Column>
           </Grid>
@@ -61,7 +63,7 @@ console.log(newName);
       );
     }
     }
-  
+    
     
     export default MainTodo;
 

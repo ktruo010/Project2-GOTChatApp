@@ -2,15 +2,17 @@
 
 
 
-
-#listContainer {
-    background:red;
-
+#listForm {
+    position: relative;
+   
 }
 
-#addNameContainer {
-    text-align: center;
 
+#addNameContainer {
+    display:flex;
+    justify-items: center;
+    justify-content: center;
+   
 }
 
 #addNameContainer Button {
@@ -18,18 +20,30 @@
 }
 
 #segmentBody {
+    
     height:25vh;
     background: black;
-    background-size: cover !important ;
+    
     margin:0;
     border:none;
     color:white;
     overflow: auto;
     max-height: 50vh;
+    
 }
 
 #clearBtn {
-    margin-top:10px;
+
+  
+
+    
+}
+
+
+#faceBtn {
+    display: flex;
+    float:center;
+    justify-items: center;
 }
 
 
@@ -46,5 +60,10 @@
 
 #inputColor {
     color:white;
+}
+
+#addFaceHeader {
+   text-align: center;
+   
 }
 
