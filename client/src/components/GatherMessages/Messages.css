@@ -6,7 +6,7 @@
     background: black ;
   
     color:white;
-   
+    clear: both;
     font-size: 25px;
     border: 15px solid white;
     overflow: hidden scroll;
@@ -25,7 +25,7 @@
     margin-left: 10px;
     background: rgb(180, 155, 123) ;
     color: white;
-    display: inline;
+    display: inline-flex;
     padding: 4px 8px;
     border-radius: 8px;
     

@@ -3,7 +3,7 @@ import { Comment } from 'semantic-ui-react'
 import 'semantic-ui-css/semantic.min.css'
 import './Messages.css'
 import ScrollToBottom from 'react-scroll-to-bottom';
-
+import Linkify from 'react-linkify';
 const GatherMessages = ({ messageArr }) => {      
   return (
     <div className="container">
@@ -21,9 +21,9 @@ const GatherMessages = ({ messageArr }) => {
             <Comment.Author className="user">
               {username}:
             </Comment.Author>
-          
+            <Linkify>
            <div className="messages"> {message}</div>
-           
+           </Linkify>
  
             </Comment.Content>
             
