@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Todo from './Todo'
 import Todolist from './Todolist';
 import './MainToDo.css'
+import { Segment , Grid , Divider , Icon} from 'semantic-ui-react'
 
 
 import uuid from "uuid";
@@ -39,16 +40,24 @@ console.log(newName);
    // const SidePanel = () => {
     
       return (
-        <div className="toDoContainer">
-          
-            
+
+
+        <Segment id="segmentBody">
+          <Grid columns={2} relaxed='very'>
+            <Grid.Column>
             <h3> Faces To Collect </h3>
             <Todo name={this.state.name} handleChange=
             {this.handleChange} handleSubmit = {this.handleSubmit}/>
+            </Grid.Column>
+            <Grid.Column>
             <Todolist names={this.state.names}/>
-            
-          
-        </div>
+            </Grid.Column>
+          </Grid>
+
+          <Divider vertical >
+          </Divider>
+        </Segment>
+        
       );
     }
     }

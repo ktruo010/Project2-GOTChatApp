@@ -1,15 +1,18 @@
 .container {
-    height:50vh;
+    height:55vh;
     width:100%;
     display: flex;
     
     background: black ;
-  
-    color:white;
+    
+    color:#ffffff;
    
     font-size: 25px;
-    border: 15px solid white;
+    
+    margin:0px;
+    
     overflow: auto;
+   
 }
 
 .user {
@@ -23,8 +26,8 @@
 
 .messages {
     margin-left: 10px;
-    background: rgb(180, 155, 123) ;
-    color: white;
+    background: rgb(197, 172, 139)  ;
+    color: black;
     display: inline;
     padding: 4px 8px;
     border-radius: 8px;

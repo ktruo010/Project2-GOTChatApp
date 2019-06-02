@@ -20,7 +20,7 @@ const GatherMessages = ({ messageArr }) => {
             <Comment.Content >
 
             <Comment.Author className="user">
-            <Image src ='' avatar circular/>
+            
              {username}:
               
             </Comment.Author>

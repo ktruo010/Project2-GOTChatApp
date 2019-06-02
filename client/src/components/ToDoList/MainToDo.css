@@ -1,4 +1,50 @@
-.toDoContainer {
-    height: 30vh;
-    overflow-y: scroll;
+
+
+
+
+
+#listContainer {
+    background:red;
+
 }
+
+#addNameContainer {
+    text-align: center;
+
+}
+
+#addNameContainer Button {
+    margin-top:10px;
+}
+
+#segmentBody {
+    height:25vh;
+    background: url('../../pages/media/Many-Faced_God_Histories_and_Lore.png');
+    background-size: cover !important ;
+    margin:0;
+    border:none;
+    color:white;
+    overflow: auto;
+    max-height: 50vh;
+}
+
+#clearBtn {
+    margin-top:20px;
+}
+
+
+
+#listItem {
+    font-size: 25px;
+    margin-top:-40px;
+   
+}
+
+#listHeader {
+    color:white;
+}
+
+#inputColor {
+    color:white;
+}
+
