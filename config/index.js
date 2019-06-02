@@ -1,3 +1,11 @@
 const Sequelize = require('sequelize')
 
-module.exports = new Sequelize('mysql://root:password@localhost:3306/chat_app')
+let sqlstr 
+
+if (process.env.NODE_ENV === 'production') {
+    sqlstr = process.env.JAWSDB_URL
+} else {
+    sqlstr = process.env.LOCALDB
+}
+
+module.exports = new Sequelize(sqlstr)

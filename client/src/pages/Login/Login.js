@@ -89,6 +89,8 @@ class Login extends Component {
   state={
     user:'',
     image: '',
+    isAuth:'false'
+
   };
   handleChange=(event)=>{
     this.setState({[event.target.name]:event.target.value})
@@ -97,10 +99,13 @@ class Login extends Component {
     const user=this.state.user;
     if(user===''){
       localStorage.setItem('user','No one');
+      
     }
     else{
     localStorage.setItem('user',user);
+    
     }
+    localStorage.setItem('Authenticate','true');
     this.props.history.push('/home');
     
   }
@@ -111,7 +116,7 @@ class Login extends Component {
 
       <div className="Login">
           <Segment className="formLogin">
-            <Header className="Header" as="h2">
+            <Header className="Header1" as="h2">
               <Icon name="fort awesome alternate"></Icon>
               Braavos Connect
             </Header>
