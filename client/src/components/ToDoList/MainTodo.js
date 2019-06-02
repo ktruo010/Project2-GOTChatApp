@@ -3,8 +3,6 @@ import Todo from './Todo'
 import Todolist from './Todolist';
 import './MainToDo.css'
 import { Segment , Grid , Divider , Icon} from 'semantic-ui-react'
-
-
 import uuid from "uuid";
 class MainTodo extends Component {
   state={
@@ -18,6 +16,25 @@ class MainTodo extends Component {
       name:e.target.value
     });
   };
+
+  handleClear = () => {this.setState({names:[],
+    id:"",
+    name:"",
+    editName:false})
+  console.log("Handle clear working@!")
+  } 
+
+  handleDelete = (id) =>{
+    console.log(`deleting ${id}`)
+    let nameArr = this.state.names;
+    for (let i = 0; i<nameArr.length; i++){
+      if (nameArr[i].id === id){
+        nameArr.splice(i,1)
+      }
+    }
+    this.setState({names: nameArr})
+  }
+
   handleSubmit = (e)=> {
     e.preventDefault();
 
@@ -33,9 +50,7 @@ console.log(newName);
     id:uuid(),
     editName:false
   })
-
-
-  };
+};
   render(){
    // const SidePanel = () => {
   
@@ -65,6 +80,22 @@ console.log(newName);
     }
     
     
+
+            <Todolist names={this.state.names} HandleDelete={this.handleDelete}/>
+            <button type="button"
+                className="ClearName"
+                onClick={this.handleClear}
+                >
+                clear name
+                </button>
+            </div>
+          </div>
+        </div>
+      );
+    }
+  }
+
+
     export default MainTodo;
 
 

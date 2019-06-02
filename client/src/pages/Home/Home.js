@@ -6,9 +6,11 @@ import ChatBanner from '../../components/Banner/Banner'
 import Logout from '../../components/Logout/Logout'
 import MainToDo from '../../components/ToDoList/MainTodo'
 import ScrollToBottom from 'react-scroll-to-bottom';
+
 ///css imports
 
 import 'semantic-ui-css/semantic.min.css'
+import MainToDo from '../../components/ToDoList/MainTodo'
 
 class Home extends Component {
     state = {
@@ -71,6 +73,8 @@ class Home extends Component {
                 
 
                 <Logout/>
+
+                <MainToDo/>
             </div>
         )
     }
