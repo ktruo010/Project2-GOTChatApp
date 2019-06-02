@@ -1,0 +1,69 @@
+
+
+
+
+#listForm {
+    position: relative;
+   
+}
+
+
+#addNameContainer {
+    display:flex;
+    justify-items: center;
+    justify-content: center;
+   
+}
+
+#addNameContainer Button {
+    margin-top:10px;
+}
+
+#segmentBody {
+    
+    height:25vh;
+    background: black;
+    
+    margin:0;
+    border:none;
+    color:white;
+    overflow: auto;
+    max-height: 50vh;
+    
+}
+
+#clearBtn {
+
+  
+
+    
+}
+
+
+#faceBtn {
+    display: flex;
+    float:center;
+    justify-items: center;
+}
+
+
+
+#listItem {
+    font-size: 25px;
+    margin-top:-40px;
+   
+}
+
+#listHeader {
+    color:white;
+}
+
+#inputColor {
+    color:white;
+}
+
+#addFaceHeader {
+   text-align: center;
+   
+}
+

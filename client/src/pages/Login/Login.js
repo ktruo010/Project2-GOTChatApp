@@ -34,7 +34,7 @@ class Login extends Component {
 
       <div className="Login">
           <Segment className="formLogin">
-            <Header className="Header" as="h2">
+            <Header className="Header1" as="h2">
               <Icon name="fort awesome alternate"></Icon>
               Braavos Connect
             </Header>
