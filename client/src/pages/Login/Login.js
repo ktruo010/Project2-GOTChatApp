@@ -95,6 +95,9 @@ class Login extends Component {
   handleChange=(event)=>{
     this.setState({[event.target.name]:event.target.value})
   };
+  imageDropDown=(event)=>{
+    this.setState({value:event.target.value})
+  }
   handleFormSubmit=(e)=>{
     const user=this.state.user;
     if(user===''){
@@ -134,8 +137,9 @@ class Login extends Component {
                     placeholder="Select your face"
                     fluid
                     selection
-                    value={this.state.image}
+                    value={faceOptions.image}
                     options={faceOptions}
+                    onChange={this.imageDropDown}
                     />
                     <Button  basic inverted  fluid type="submit" onClick={this.routeChange}>
                       Login
