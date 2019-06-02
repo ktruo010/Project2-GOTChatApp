@@ -19,7 +19,7 @@
 
 #segmentBody {
     height:25vh;
-    background: url('../../pages/media/Many-Faced_God_Histories_and_Lore.png');
+    background: black;
     background-size: cover !important ;
     margin:0;
     border:none;
@@ -29,7 +29,7 @@
 }
 
 #clearBtn {
-    margin-top:20px;
+    margin-top:10px;
 }
 
 

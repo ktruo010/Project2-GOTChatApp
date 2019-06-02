@@ -25,7 +25,7 @@ const GatherMessages = ({ messageArr }) => {
               
             </Comment.Author>
           
-           <div className="messages"> {message}</div>
+           <Comment.Text className="messages"> {message} </Comment.Text>
            
  
             </Comment.Content>

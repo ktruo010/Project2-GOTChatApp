@@ -54,7 +54,7 @@ console.log(newName);
             </Grid.Column>
           </Grid>
 
-          <Divider vertical >
+          <Divider vertical ><Icon circular inverted name='angle double right' />
           </Divider>
         </Segment>
         
