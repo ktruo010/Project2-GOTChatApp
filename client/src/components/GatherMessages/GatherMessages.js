@@ -1,6 +1,7 @@
 import React from 'react'
 import { Comment } from 'semantic-ui-react'
 import 'semantic-ui-css/semantic.min.css'
+import { Image } from 'semantic-ui-react'
 import './Messages.css'
 
 const GatherMessages = ({ messageArr }) => {      
@@ -17,7 +18,9 @@ const GatherMessages = ({ messageArr }) => {
             <Comment.Content >
 
             <Comment.Author className="user">
-              {username}:
+            <Image src ='' avatar circular/>
+             {username}:
+              
             </Comment.Author>
           
            <div className="messages"> {message}</div>

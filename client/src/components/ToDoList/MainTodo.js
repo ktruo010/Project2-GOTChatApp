@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import Todo from './Todo'
 import Todolist from './Todolist';
+import './MainToDo.css'
 
-import "bootstrap/dist/css/bootstrap.min.css";
+
 import uuid from "uuid";
 class MainTodo extends Component {
   state={
@@ -38,16 +39,15 @@ console.log(newName);
    // const SidePanel = () => {
     
       return (
-        <div className="container">
-          <div className="row">
-            <div className=".col-sm-11">
-            <h3 className="text-capitalize text-center">
-              Add Chat Names</h3>
+        <div className="toDoContainer">
+          
+            
+            <h3> Faces To Collect </h3>
             <Todo name={this.state.name} handleChange=
             {this.handleChange} handleSubmit = {this.handleSubmit}/>
             <Todolist names={this.state.names}/>
-            </div>
-          </div>
+            
+          
         </div>
       );
     }
