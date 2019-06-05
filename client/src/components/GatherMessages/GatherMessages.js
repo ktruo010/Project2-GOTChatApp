@@ -4,8 +4,13 @@ import 'semantic-ui-css/semantic.min.css'
 // import { Image } from 'semantic-ui-react'
 import './Messages.css'
 import ScrollToBottom from 'react-scroll-to-bottom';
-
-const GatherMessages = ({ messageArr }) => { 
+import Linkify from 'react-linkify';
+const componentDecorator = (href, text, key) => (
+  <a href={href} key={key} target="_blank">
+    {text}
+  </a>
+);
+const GatherMessages = ({ messageArr }) => {      
   return (
     <div className="container">
       <ScrollToBottom>
@@ -22,9 +27,9 @@ const GatherMessages = ({ messageArr }) => {
             <Comment.Author className="user">
               {username}:
             </Comment.Author>
-          
+          <Linkify componentDecorator={componentDecorator}>
            <Comment.Text className="messages"> {message} </Comment.Text>
-           
+           </Linkify>
  
             </Comment.Content>
             

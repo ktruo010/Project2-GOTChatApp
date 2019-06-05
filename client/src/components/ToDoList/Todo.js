@@ -5,8 +5,8 @@ export default class Todo extends Component {
     render() {
         const {name, handleChange,handleSubmit} = this.props
         return (
-            <div id="addNameContainer">
-            <Form onSubmit={handleSubmit} id="listForm">
+            <div id="addNameContainer" >
+            <Form onSubmit={handleSubmit} id="listForm" >
                 <div className="input-group" >
                     
                     <Input id="inputColor" type="text" transparent placeholder='Add a...' 
