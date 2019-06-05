@@ -13,13 +13,17 @@ import CatelynImage from '../media/profile-images/catelyn-stark.png'
 import CerseiImage from '../media/profile-images/cersei-lannister.png'
 import DanyImage from '../media/profile-images/dany.png'
 import JaimeImage from '../media/profile-images/jaime-lannister.png'
+import JoffreyImage from '../media/profile-images/joffrey-baratheon.png'
 import JonImage from '../media/profile-images/jon-snow.png'
+import LittleImage from '../media/profile-images/little-finger.png'
 import MelisandreImage from '../media/profile-images/melisandre.png'
 import NedImage from '../media/profile-images/ned-stark.png'
+import NightImage from '../media/profile-images/night-king.png'
 import OberynImage from '../media/profile-images/oberyn-martell.png'
 import RobImage from '../media/profile-images/rob-stark.png'
 import RobertImage from '../media/profile-images/robert-baratheon.png'
 import SansaImage from '../media/profile-images/sansa-stark.png'
+import TormundImage from '../media/profile-images/tormund-giantsbane.png'
 import TyrionImage from '../media/profile-images/tyrion-lannister.png'
 
 const faceOptions = [
@@ -60,10 +64,22 @@ const faceOptions = [
     image: { avatar: true, src: JaimeImage },
   },
   {
+    key: 'Joffrey Baratheon',
+    text: 'Joffrey Baratheon',
+    value: JoffreyImage,
+    image: { avatar: true, src: JoffreyImage },
+  },
+  {
     key: 'Jon Snow',
     text: 'Jon Snow',
     value: JonImage,
     image: { avatar: true, src: JonImage },
+  },
+  {
+    key: 'Little Finger',
+    text: 'Little Finger',
+    value: LittleImage,
+    image: { avatar: true, src: LittleImage },
   },
   {
     key: 'Melisandre',
@@ -76,6 +92,12 @@ const faceOptions = [
     text: 'Ned Stark',
     value: NedImage,
     image: { avatar: true, src: NedImage },
+  },
+  {
+    key: 'Night King',
+    text: 'Night King',
+    value: NightImage,
+    image: { avatar: true, src: NightImage },
   },
   {
     key: 'Oberyn Martell',
@@ -100,6 +122,12 @@ const faceOptions = [
     text: 'Sansa Stark',
     value: SansaImage,
     image: { avatar: true, src: SansaImage },
+  },
+  {
+    key: 'Tormund Giantsbane',
+    text: 'Tormund Giantsbane',
+    value: TormundImage,
+    image: { avatar: true, src: TormundImage },
   },
   {
     key: 'Tyrion Lannister',
