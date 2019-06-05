@@ -24,85 +24,85 @@ const faceOptions = [
   {
     key: 'Arya Stark',
     text: 'Arya Stark',
-    value: 'Arya Stark',
+    value: AryaImage,
     image: { avatar: true, src: AryaImage },
   },
   {
     key: 'Benjen Stark',
     text: 'Benjen Stark',
-    value: 'Benjen Stark',
+    value: BenjenImage,
     image: { avatar: true, src: BenjenImage },
   },
   {
     key: 'Catelyn Stark',
     text: 'Catelyn Stark',
-    value: 'Catelyn Stark',
+    value: CatelynImage,
     image: { avatar: true, src: CatelynImage },
   },
   {
     key: 'Cersei Lannister',
     text: 'Cersei Lannister',
-    value: 'Cersei Lannister',
+    value: CerseiImage,
     image: { avatar: true, src: CerseiImage },
   },
   {
     key: 'Daenerys Targaryen',
     text: 'Daenerys Targaryen',
-    value: 'Daenerys Targaryen',
+    value: DanyImage,
     image: { avatar: true, src: DanyImage },
   },
   {
     key: 'Jaime Lannister',
     text: 'Jaime Lannister',
-    value: 'Jaime Lannister',
+    value: JaimeImage,
     image: { avatar: true, src: JaimeImage },
   },
   {
     key: 'Jon Snow',
     text: 'Jon Snow',
-    value: 'Jon Snow',
+    value: JonImage,
     image: { avatar: true, src: JonImage },
   },
   {
     key: 'Melisandre',
     text: 'Melisandre',
-    value: 'Melisandre',
+    value: MelisandreImage,
     image: { avatar: true, src: MelisandreImage },
   },
   {
     key: 'Ned Stark',
     text: 'Ned Stark',
-    value: 'Ned Stark',
+    value: NedImage,
     image: { avatar: true, src: NedImage },
   },
   {
     key: 'Oberyn Martell',
     text: 'Oberyn Martell',
-    value: 'Oberyn Martell',
+    value: OberynImage,
     image: { avatar: true, src: OberynImage },
   },
   {
     key: 'Rob Stark',
     text: 'Rob Stark',
-    value: 'Rob Stark',
+    value: RobImage,
     image: { avatar: true, src: RobImage },
   },
   {
     key: 'Robert Baratheon',
     text: 'Robert Baratheon',
-    value: 'Robert Baratheon',
+    value: RobertImage,
     image: { avatar: true, src: RobertImage },
   },
   {
     key: 'Sansa Stark',
     text: 'Sansa Stark',
-    value: 'Sansa Stark',
+    value: SansaImage,
     image: { avatar: true, src: SansaImage },
   },
   {
     key: 'Tyrion Lannister',
     text: 'Tyrion Lannister',
-    value: 'Tyrion Lannister',
+    value: TyrionImage,
     image: { avatar: true, src: TyrionImage },
   },
 ]
@@ -114,25 +114,26 @@ class Login extends Component {
     isAuth:'false'
 
   };
-  handleChange=(event)=>{
+  handleChange=(event, { value })=>{
     this.setState({[event.target.name]:event.target.value})
+    console.log(value)
   };
-  imageDropDown=(event)=>{
-    this.setState({value:event.target.value})
-  }
   handleFormSubmit=(e)=>{
     const user=this.state.user;
+    const image=this.state.image;
+
     if(user===''){
       localStorage.setItem('user','No one');
-      
+      localStorage.setItem('image', AryaImage);
     }
+
     else{
-    localStorage.setItem('user',user);
-    
+      localStorage.setItem('image',image);
+      localStorage.setItem('user',user);
     }
-    localStorage.setItem('Authenticate','true');
-    this.props.history.push('/home');
-    
+
+      localStorage.setItem('Authenticate','true');
+      this.props.history.push('/home');
   }
 
 
@@ -159,13 +160,14 @@ class Login extends Component {
                     placeholder="Select your face"
                     fluid
                     selection
+                    data-value={faceOptions.image}
                     value={faceOptions.image}
                     options={faceOptions}
-                    onChange={this.imageDropDown}
+                    onChange={this.handleChange}
                     />
-                    <Button  basic inverted  fluid type="submit" onClick={this.routeChange}>
-                      Login
-                    </Button>
+                <Button className="loginButton" basic inverted  fluid type="submit" onClick={this.routeChange}>
+                  Login
+                </Button>
                 </Form>
           </Segment>
       </div>

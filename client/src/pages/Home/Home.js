@@ -12,6 +12,7 @@ import 'semantic-ui-css/semantic.min.css'
 
 class Home extends Component {
     state = {
+        image: localStorage.getItem('image'),
         username: localStorage.getItem('user'),
         WriteMessage: '',
         messageArr: []
@@ -47,7 +48,8 @@ class Home extends Component {
         }
         let message = {
             message: this.state.WriteMessage,
-            username: this.state.username
+            username: this.state.username,
+            image: this.state.image
         }
         let messageArr = this.state.messageArr
         Messages.postOne(message)

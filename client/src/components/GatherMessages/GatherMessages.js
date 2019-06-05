@@ -1,7 +1,7 @@
 import React from 'react'
 import { Comment } from 'semantic-ui-react'
 import 'semantic-ui-css/semantic.min.css'
-import { Image } from 'semantic-ui-react'
+// import { Image } from 'semantic-ui-react'
 import './Messages.css'
 import ScrollToBottom from 'react-scroll-to-bottom';
 import Linkify from 'react-linkify';
@@ -16,18 +16,16 @@ const GatherMessages = ({ messageArr }) => {
       <ScrollToBottom>
         <div style={{flexGrow:1}}>
           <Comment.Group>
-            {messageArr.map(({ id, message, username }) => (
+            {messageArr.map(({ id, message, username, image }) => (
             
             <Comment key={id}>
             
           
 
             <Comment.Content >
-
+            <Comment.Avatar src={image}/>
             <Comment.Author className="user">
-            
-             {username}:
-              
+              {username}:
             </Comment.Author>
           <Linkify componentDecorator={componentDecorator}>
            <Comment.Text className="messages"> {message} </Comment.Text>
@@ -38,8 +36,6 @@ const GatherMessages = ({ messageArr }) => {
             </Comment>
             ))}
             
-           
-          
         </Comment.Group>
       </div>
     </ScrollToBottom>
@@ -47,7 +43,6 @@ const GatherMessages = ({ messageArr }) => {
                 
    );
   }
-
 
 export default GatherMessages
 
