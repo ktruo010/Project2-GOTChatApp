@@ -3,6 +3,8 @@ import { Header, Form , Icon , Button , Segment } from 'semantic-ui-react'
 import 'semantic-ui-css/semantic.min.css'
 import './Login.css'
 import { withRouter } from 'react-router-dom';
+import { GiHoodedAssassin } from 'react-icons/gi';
+import { GiHoodedFigure } from 'react-icons/gi';
 
 
 class Login extends Component {
@@ -45,7 +47,7 @@ class Login extends Component {
                     onChange={this.handleChange}
                     />
                     <Button  basic inverted  fluid type="submit" onClick={this.routeChange}>
-                      Login
+                      <GiHoodedAssassin/>Login<GiHoodedFigure/>
                     </Button>
                 </Form>
           </Segment>

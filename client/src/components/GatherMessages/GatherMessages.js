@@ -3,6 +3,7 @@ import { Comment } from 'semantic-ui-react'
 import 'semantic-ui-css/semantic.min.css'
 import './Messages.css'
 
+
 const GatherMessages = ({ messageArr }) => {      
   return (
     <div className="container">
@@ -20,7 +21,7 @@ const GatherMessages = ({ messageArr }) => {
               {username}:
             </Comment.Author>
           
-           <div className="messages"> {message}</div>
+           <div className="messages">{message}</div>
            
  
             </Comment.Content>
