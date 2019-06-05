@@ -66,7 +66,7 @@ console.log(newName);
 
         <Segment id="segmentBody">
           <Grid columns={2}  >
-            <Grid.Column textAlign="center">
+            <Grid.Column >
             <h3 id="addFaceHeader"> Faces To Collect </h3>
             <Todo name={this.state.name} handleChange=
             {this.handleChange} handleSubmit = {this.handleSubmit}/>
@@ -74,7 +74,7 @@ console.log(newName);
             <Grid.Column textAlign="center">
             <Todolist names={this.state.names} HandleDelete={this.handleDelete}/>
             <Button  type="button"
-                className="clearBtn" type="submit" color="black" size="medium" basic inverted 
+                id="clearBtn" type="submit" color="black" size="medium" basic inverted 
                 onClick={this.handleClear}
                 >
                 Collected

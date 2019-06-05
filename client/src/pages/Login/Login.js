@@ -3,7 +3,7 @@ import { Header, Form , Icon , Button , Segment, Dropdown } from 'semantic-ui-re
 import 'semantic-ui-css/semantic.min.css'
 import './Login.css'
 import { withRouter } from 'react-router-dom';
-import { GiBloodySword } from 'react-icons/gi';
+import { GiCrownedSkull } from 'react-icons/gi';
 import { GiDoubleFaceMask } from 'react-icons/gi';
 
 //Import all character icons
@@ -151,8 +151,6 @@ class Login extends Component {
                 <Form onSubmit={this.handleFormSubmit.bind(this)}>
                     <Form.Input 
                     name="user"
-                    icon="user secret"
-                    iconPosition="right"
                     placeholder="Death Is Certain..." 
                     type="text"
                     value={this.state.user}
@@ -167,7 +165,7 @@ class Login extends Component {
                     options={faceOptions}
                     onChange={this.handleChange}
                     />
-                <Button className="loginButton" basic inverted  fluid type="submit" onClick={this.routeChange}>
+                <Button id="loginButton" basic inverted  fluid type="submit" onClick={this.routeChange}>
                   Login
                 </Button>
                 </Form>

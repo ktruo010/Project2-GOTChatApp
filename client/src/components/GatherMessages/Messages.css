@@ -2,16 +2,12 @@
     height:54vh;
     width:100%;
     display: flex;
-    
     background: url('../../pages/media/Many-Faced_God_Histories_and_Lore.png');
     background-size: cover;
-    border:none;
+    
     color:#ffffff;
-   
     font-size: 25px;
-    
     margin:0px;
-    
     overflow: auto;
    
 }
@@ -19,21 +15,36 @@
 .user {
     color:white !important ;
     font-size: 11px;
-    margin-bottom: 10px ;
-    margin-left: 5px;
-    margin-top: 3px;
+    padding:5px;
+    
+}
+
+#avatar {
+    vertical-align: middle;
+    width: 45px;
+    height: 45px;
+
+  
 }
 
 
 .messages {
     border-radius: 20px;
     padding: 5px 15px;
-    margin: 10px !important;
-    
+    margin: 8px !important;
     background:rgb(153, 142, 129);
     display: inline-block;
-    hyphens: auto;    ;
+    hyphens: auto;
     -webkit-hyphens: auto    ;
     -moz-hyphens: auto    ;
     -ms-hyphens: auto    ;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+#comments {
+    margin-top:10px;
+    margin-left:10px;
 }

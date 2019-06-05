@@ -7,7 +7,7 @@ class Banner extends Component {
         return (
             <Segment raised id="chatBanner">
                 <Header id="header" as="h4" >
-                Welcome to Braavos
+                Welcome to Braavos Connect
                 </Header>
                 </Segment>
         );

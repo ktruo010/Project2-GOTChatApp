@@ -21,3 +21,7 @@
     border-color:rgb(180, 155, 123) !important;
     box-shadow: 3px 6px 10px 3px rgba(0, 0, 0, 0.80), 5px 10px 15px 5px rgba(0, 0, 0, 0.75) !important;
 }
+
+#loginButton {
+    margin-top:15px;
+}

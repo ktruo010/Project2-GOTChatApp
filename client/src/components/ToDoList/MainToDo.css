@@ -41,18 +41,28 @@
     justify-items: center;
 }
 
-
+#listGrid{
+    display:flex;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+}
 
 #listItem {
     
-    font-size: 25px;
-    margin-top:-40px;
+    font-size: 20px;
+    padding:10px;
    
 }
 
 #listHeader {
     color:white;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
 }
+
+
 
 #inputColor {
     color:white;
@@ -67,4 +77,8 @@
 #icon {
     color: white;
     font-size: 100px;
+}
+
+#clearBtn {
+    margin-top:30px ;
 }
