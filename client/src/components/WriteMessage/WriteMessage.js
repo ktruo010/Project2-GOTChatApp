@@ -8,10 +8,6 @@ import { GiPointySword } from 'react-icons/gi';
 const WriteMessage = ({ handleFormSubmit, handleInputChange, username, message }) =>
   <Form style={{display:"flex"}} id="sendMsg">
     <label htmlFor='title' id='username' value={username} />
-    <Label  color='black' htmlFor='title' id='send'>
-    <Label.Detail as="h3" id="msg"> <GiScrollUnfurled/>Message<GiScrollUnfurled/>:
-    </Label.Detail>
-    </Label>
     <Input style={{flexGrow:1}} type='text' id='WriteMessage' placeholder="Valar Morghulis"value={message} onChange={handleInputChange} />
     <Button color='black'  onClick={handleFormSubmit}><GiPointySword/>Send<GiPointySword/></Button>
   </Form>
