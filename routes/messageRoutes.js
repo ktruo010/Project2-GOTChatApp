@@ -9,6 +9,7 @@ module.exports = app => {
   })
   // POST a message
   app.post('/messages', (req, res) => {
+    console.log(req.body)
     Message.create(req.body)
       .then(_ => res.sendStatus(200))
       .catch(error => console.log(error))
