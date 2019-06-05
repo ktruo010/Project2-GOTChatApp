@@ -116,15 +116,15 @@ class Login extends Component {
   };
   handleChange=(event, { value })=>{
     this.setState({[event.target.name]:event.target.value})
-    console.log(value)
+    this.setState({image:value})
   };
+
   handleFormSubmit=(e)=>{
     const user=this.state.user;
     const image=this.state.image;
 
     if(user===''){
       localStorage.setItem('user','No one');
-      localStorage.setItem('image', AryaImage);
     }
 
     else{
