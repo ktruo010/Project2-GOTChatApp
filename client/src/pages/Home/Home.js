@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import WriteMessage from '../../components/WriteMessage'
 import GatherMessages from '../../components/GatherMessages'
-import Messages from '..//../utils/Message.js'
+import Messages from '../../utils/Message.js'
 import ChatBanner from '../../components/Banner/Banner'
 import Logout from '../../components/Logout/Logout'
 import MainToDo from '../../components/ToDoList/MainTodo'
@@ -47,7 +47,8 @@ class Home extends Component {
         }
         let message = {
             message: this.state.WriteMessage,
-            username: this.state.username
+            username: this.state.username,
+            image: localStorage.getItem('image')
         }
         let messageArr = this.state.messageArr
         Messages.postOne(message)
