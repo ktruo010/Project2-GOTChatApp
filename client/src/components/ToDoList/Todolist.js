@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Todoitem from './Todoitem';
 import './MainToDo.css'
-import { Checkbox , List , Grid, Container, Header, ListContent, GridColumn } from 'semantic-ui-react'
+import { Checkbox , List , Grid, Container, Header, ListContent, GridColumn , Segment} from 'semantic-ui-react'
 
 export default class Todolist extends Component {
     deleteName = (e) => {
@@ -14,13 +14,12 @@ export default class Todolist extends Component {
         const {names}=this.props
         return (
 
-            <Grid stackable columns={2}>
+            <Grid stackable columns={2} id="listGrid">
                 <Grid.Column>
-                     <Header id="listHeader" as="h3">
+                     <Header id="listHeader" as="h3" textAlign="center">
                        Happy Hunting
                     </Header>
-                </Grid.Column>
-                 <Grid.Column>
+                
                     <List divided >
                         <List.Item id="listItem" textAlign="center">
                     {
@@ -33,7 +32,9 @@ export default class Todolist extends Component {
                             
                          </Grid.Column>
                          <Grid.Column floated='left'>
+                         
                             <Checkbox id={name.id} onClick={this.deleteName}/>
+                            
                         </Grid.Column>
                           </Grid> 
                         )
