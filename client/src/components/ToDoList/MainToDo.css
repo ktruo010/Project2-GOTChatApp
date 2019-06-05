@@ -60,6 +60,11 @@
 
 #addFaceHeader {
    text-align: center;
+   font-family: 'Braavos';
    
 }
 
+#icon {
+    color: white;
+    font-size: 100px;
+}

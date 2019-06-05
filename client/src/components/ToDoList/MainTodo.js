@@ -3,6 +3,7 @@ import Todo from './Todo'
 import Todolist from './Todolist';
 import './MainToDo.css'
 import { Segment , Grid , Divider , Icon , Button} from 'semantic-ui-react'
+import { GiCrossedAxes } from 'react-icons/gi';
 
 
 import uuid from "uuid";
@@ -81,8 +82,7 @@ console.log(newName);
             </Grid.Column>
           </Grid>
 
-          <Divider vertical ><Icon circular inverted name='angle double right' />
-          </Divider>
+          <Divider vertical  ><span style= {{ color: 'white' }}><GiCrossedAxes size={30}/></span></Divider>
         </Segment>
         
       );

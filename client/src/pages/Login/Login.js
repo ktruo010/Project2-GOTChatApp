@@ -3,8 +3,8 @@ import { Header, Form , Icon , Button , Segment, Dropdown } from 'semantic-ui-re
 import 'semantic-ui-css/semantic.min.css'
 import './Login.css'
 import { withRouter } from 'react-router-dom';
-import { GiHoodedAssassin } from 'react-icons/gi';
-import { GiHoodedFigure } from 'react-icons/gi';
+import { GiBloodySword } from 'react-icons/gi';
+import { GiDoubleFaceMask } from 'react-icons/gi';
 
 //Import all character icons
 import AryaImage from '../media/profile-images/arya-stark.png'
@@ -152,13 +152,13 @@ class Login extends Component {
                     name="user"
                     icon="user secret"
                     iconPosition="right"
-                    placeholder="Death is certain...›"
+                    placeholder="Death Is Certain..." 
                     type="text"
                     value={this.state.user}
                     onChange={this.handleChange}
                     />
                 <Dropdown onSubmit={this.handleFormSubmit.bind(this)}
-                    placeholder="Select your face"
+                    placeholder="Select Your Face"
                     fluid
                     selection
                     value={faceOptions.image}
@@ -166,7 +166,7 @@ class Login extends Component {
                     onChange={this.imageDropDown}
                     />
                     <Button  basic inverted  fluid type="submit" onClick={this.routeChange}>
-                      <GiHoodedAssassin/>Login<GiHoodedFigure/>
+                      Login
                     </Button>
                 </Form>
           </Segment>

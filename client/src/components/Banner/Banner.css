@@ -4,7 +4,8 @@
     margin:0;
     background-image: url('../../pages/media/c89141e8cee7bdb99f977871255dbb75.jpg');
     background-size: cover ;
-    
+    font-family: 'Braavos';
+   
    
     
     
@@ -13,4 +14,5 @@
 
 #header {
     color:white !important;
+    font-family: 'Braavos';
 }
