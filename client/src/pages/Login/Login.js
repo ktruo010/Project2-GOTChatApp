@@ -152,14 +152,21 @@ class Login extends Component {
   handleFormSubmit=(e)=>{
     const user=this.state.user;
     const image=this.state.image;
-
-    if(user===''){
+    const defaulti=faceOptions[1].image
+    if(user===''&&image===''){
       localStorage.setItem('user','No one');
+      localStorage.setItem('image',defaulti.src);
     }
-
     else{
+      if(user==='')
+      {
+        localStorage.setItem('user','No one');
+      }
+      else{
+        localStorage.setItem('user',user);
+      }
       localStorage.setItem('image',image);
-      localStorage.setItem('user',user);
+      
     }
 
       localStorage.setItem('Authenticate','true');
